@@ -1,0 +1,28 @@
+package com.liwei.activity;
+
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.EditText;
+
+public class ChangeTeacher  extends Activity{
+	private EditText tno;
+	private EditText tname;
+	private EditText tsex;
+	private EditText tage;
+	private EditText prof;
+	private EditText phone;
+	private EditText dept;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	requestWindowFeature(Window.FEATURE_NO_TITLE);
+	setContentView(R.layout.addteacher);
+	}
+public void initView(){
+	
+}
+}

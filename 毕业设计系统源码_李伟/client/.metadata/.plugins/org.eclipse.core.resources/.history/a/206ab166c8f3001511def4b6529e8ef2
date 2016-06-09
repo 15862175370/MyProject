@@ -1,0 +1,141 @@
+package com.liwei.activity;
+
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+import com.liwei.utils.UrlUtils;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class CourseRegist extends Activity {
+	private String tno;
+	private EditText cno;
+	private EditText cname;
+	private EditText ctime;
+	private EditText cadress;
+	private EditText content;
+	private Button regist;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.course_registration);
+		MyApplation.setActivity(this);
+		tno=getIntent().getStringExtra("tno");
+		System.out.println(tno+"得到了");
+		initView();
+		
+	}
+	
+	public void initView(){
+		ImageView close=(ImageView)findViewById(R.id.bjmgf_sdk_closeAboutBtnId);
+		/**
+		 * 返回按钮
+		 */
+		close.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			finish();
+				
+			}
+		});
+		regist=(Button) findViewById(R.id.zhuce);
+		cno=(EditText) findViewById(R.id.cno_et);
+		cname=(EditText) findViewById(R.id.cname_et);
+		ctime=(EditText) findViewById(R.id.ctime_et);
+		cadress=(EditText) findViewById(R.id.cadress_et);
+		content=(EditText) findViewById(R.id.content_et);
+		regist.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(!cno.getText().toString().equals("")&&!cname.getText().toString().equals("")
+					&&!ctime.getText().toString().equals("")&&!cadress.getText().toString().equals("")
+					&&!content.getText().toString().equals("")){
+					new AlertDialog.Builder(CourseRegist.this)
+					.setTitle("注册课程")
+					.setMessage("你确定要提交注册的课程吗？")
+					.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							HttpUtils utils=new HttpUtils();
+							RequestParams params=new RequestParams();
+							params.addBodyParameter("cno",cno.getText().toString());
+							params.addBodyParameter("cname",cname.getText().toString());
+							params.addBodyParameter("ctime",ctime.getText().toString());
+							params.addBodyParameter("cadress",cadress.getText().toString());
+							params.addBodyParameter("content",content.getText().toString());
+							params.addBodyParameter("tno",tno);
+							
+							utils.send(HttpMethod.POST, UrlUtils.url+"/RegistCourseServlet",params ,new RequestCallBack<String>() {
+
+								@Override
+								public void onFailure(HttpException arg0,
+										String arg1) {
+									
+									Toast.makeText(CourseRegist.this, "注册课程失败", Toast.LENGTH_LONG).show();
+								}
+
+								@Override
+								public void onSuccess(ResponseInfo<String> responseInfo) {
+								String flag=responseInfo.result;
+								System.out.println("注册失败"+flag);
+								if(flag.equals("true")){
+									Toast.makeText(CourseRegist.this, "注册课程成功", Toast.LENGTH_LONG).show();
+									finish();
+								}else {
+									Toast.makeText(CourseRegist.this, "注册课程失败", Toast.LENGTH_LONG).show();
+								}
+									
+								}
+							} );
+							
+							
+							
+						}
+					})
+					.setNegativeButton("取消",new DialogInterface.OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.dismiss();
+							
+						}
+					})
+					.create().show();;
+				
+	
+					
+				}else{
+					Toast.makeText(CourseRegist.this, "请确保所填内容都不为空", Toast.LENGTH_LONG).show();
+				}
+					
+				
+			}
+		});
+		
+		
+	}
+	
+	
+	
+
+}

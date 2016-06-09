@@ -1,0 +1,28 @@
+package com.liwei.activity;
+
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+public class AdministratorSerch  extends Activity{
+	private EditText serach;
+	private ImageView iv;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.serchteacher);
+		MyApplation.setActivity(this);
+		initView();
+	}
+             public void initView(){
+            	 serach=(EditText) findViewById(R.id.myteacher_searchView);
+            	 iv=(ImageView) findViewById(R.id.iv);
+             }
+}

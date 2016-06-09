@@ -1,0 +1,135 @@
+package com.liwei.teachsystem;
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.LinearLayout;
+import com.liwei.fragment.BroadCastFragment;
+import com.liwei.fragment.MainFragment;
+import com.liwei.fragment.PersonCenterFragment;
+import com.liwei.fragment.ShareFragment;
+
+public class MainActivity extends Activity implements OnClickListener{
+	private MainFragment mainFragment=null;
+	private ShareFragment shareFragment=null;
+	private PersonCenterFragment personCenterFragment=null;
+	private BroadCastFragment broadCastFragment=null;
+    private LinearLayout mainLinearLayout=null;
+    private LinearLayout broadcastLinearLayout=null;
+    private LinearLayout shareLayout=null;
+    private LinearLayout personcenterLinearLayout=null;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.activity_main);
+		initView();
+		
+		
+	}
+	
+	
+	public void initView() {
+		if(mainLinearLayout==null){
+		mainLinearLayout=(LinearLayout)findViewById(R.id.id_tab_main);
+		mainLinearLayout.setOnClickListener(this);
+		}
+		
+		if(shareLayout==null){
+			shareLayout=(LinearLayout)findViewById(R.id.id_tab_share);
+			shareLayout.setOnClickListener(this);
+		}
+		if(personcenterLinearLayout==null){
+			personcenterLinearLayout=(LinearLayout)findViewById(R.id.id_tab_personcenter);
+			personcenterLinearLayout.setOnClickListener(this);
+		}
+		if(broadcastLinearLayout==null){
+			broadcastLinearLayout=(LinearLayout)findViewById(R.id.id_tab_broadcast);
+			broadcastLinearLayout.setOnClickListener(this);
+		}
+	if(mainFragment==null){
+		mainFragment=new MainFragment();
+		getFragmentManager().beginTransaction().add(R.id.id_viewpager, mainFragment).commit();
+		getFragmentManager().beginTransaction().hide(mainFragment).commit();
+		
+	}
+if(shareFragment==null){
+	shareFragment=new ShareFragment();
+	getFragmentManager().beginTransaction().add(R.id.id_viewpager, shareFragment).commit();
+	getFragmentManager().beginTransaction().hide(shareFragment).commit();
+}
+
+if(personCenterFragment==null){
+	personCenterFragment=new PersonCenterFragment();
+	getFragmentManager().beginTransaction().add(R.id.id_viewpager, personCenterFragment).commit();
+	getFragmentManager().beginTransaction().hide(personCenterFragment).commit();
+}
+
+if(broadCastFragment==null){
+	broadCastFragment=new BroadCastFragment();
+	getFragmentManager().beginTransaction().add(R.id.id_viewpager, broadCastFragment).commit();
+	getFragmentManager().beginTransaction().hide(broadCastFragment).commit();
+}
+	}
+	@Override
+	protected void onResume() {
+	getFragmentManager().beginTransaction().show(mainFragment).commit();
+		super.onResume();
+	}
+
+	@Override
+	public void onClick(View v) {
+		int id=v.getId();
+		switch (id) {
+		case R.id.id_tab_main:
+			showFragment(mainFragment);
+			System.out.println("sucess");
+			
+			break;
+		case R.id.id_tab_share:
+		showFragment(shareFragment);
+		System.out.println("sucess");
+			
+			break;
+			case R.id.id_tab_personcenter:
+				showFragment(personCenterFragment);
+				System.out.println("sucess");
+				break;
+			case R.id.id_tab_broadcast:
+				showFragment(broadCastFragment);
+				System.out.println("sucess");
+				break;
+		default:
+			break;
+		}
+		
+	}
+	/**
+	 * 显示Fragment
+	 * @param f 需要显示的Fragment
+	 */
+public void showFragment(Fragment f){
+	if(mainFragment!=null){
+		getFragmentManager().beginTransaction().hide(mainFragment).commit();
+		
+	}
+if(shareFragment!=null){
+	getFragmentManager().beginTransaction().hide(shareFragment).commit();
+}
+
+if(personCenterFragment!=null){
+	getFragmentManager().beginTransaction().hide(personCenterFragment).commit();
+}
+
+if(broadCastFragment!=null){
+	getFragmentManager().beginTransaction().hide(broadCastFragment).commit();
+}
+	getFragmentManager().beginTransaction().show(f).commit();
+	System.out.println("sucess");
+}
+	
+}

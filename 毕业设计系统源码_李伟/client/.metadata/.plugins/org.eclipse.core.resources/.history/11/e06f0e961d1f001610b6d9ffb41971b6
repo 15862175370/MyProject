@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ <LinearLayout 
+     android:id="@+id/cno_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/teacher_tn" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="学生编号:"/>
+        <EditText
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_sno" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+ <LinearLayout 
+     android:id="@+id/cno"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/teach" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="学生姓名:"/>
+        <EditText
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_sname" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+    
+     <LinearLayout 
+     android:id="@+id/cname_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+    
+        >
+        <TextView 
+         android:id="@+id/teacher_se" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="学生性别:"/>
+        <EditText
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/myteacher_sex" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+        android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+
+      <LinearLayout 
+     android:id="@+id/ctime_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+    
+        >
+        <TextView 
+         android:id="@+id/mytea" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="学生年龄:"/>
+        <EditText 
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_age" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+      android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+      
+       
+      
+        <LinearLayout 
+     android:id="@+id/content_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+        <TextView 
+         android:id="@+id/teacher_phone" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="联系方式:"/>
+        <EditText 
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_phone" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+         <LinearLayout 
+     android:id="@+id/teacher_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+        <TextView 
+         android:id="@+id/teacher_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="系部编号:"/>
+        <EditText
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_dno" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+         
+           <LinearLayout 
+     android:id="@+id/teacher_linearlay"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+        <TextView 
+         android:id="@+id/teacher_user" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="用户名 :"/>
+        <EditText
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_user" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+      
+         
+      
+           
+        <LinearLayout 
+     android:id="@+id/teacher_line"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+        <TextView 
+         android:id="@+id/teacher_pass" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="密 码 :"/>
+        <EditText
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/mystudent_pass" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+           
+           
+           
+    <RelativeLayout 
+           android:layout_height="wrap_content" 
+             android:layout_width="match_parent" 
+             android:layout_marginTop="20dp"
+           
+            >
+            <Button 
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+             android:id="@+id/mystudent_add"  
+             android:layout_height="40dp" 
+               android:layout_width="100dp" 
+               android:background="#1bb0f8"
+               android:textSize="20dp"
+               android:text="添加"
+                />
+        </RelativeLayout>
+    
+</LinearLayout>
+</ScrollView>

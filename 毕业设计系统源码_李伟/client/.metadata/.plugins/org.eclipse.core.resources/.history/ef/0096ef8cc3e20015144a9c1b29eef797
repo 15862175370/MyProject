@@ -1,0 +1,27 @@
+package com.liwei.fragment;
+
+
+
+import com.liwei.teachsystem.R;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
+public class MainFragment extends Fragment{
+	private View view;
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+	 view=inflater.inflate(R.layout.mainfragment,container, false);
+	LinearLayout baishitongLayout=(LinearLayout)view.findViewById(R.id.baishitong);
+		return view;
+	}
+	public void initView(){
+		
+	}
+
+}

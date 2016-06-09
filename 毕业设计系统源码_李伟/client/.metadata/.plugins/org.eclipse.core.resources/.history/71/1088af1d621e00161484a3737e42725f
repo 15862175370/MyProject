@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ad"
+    android:orientation="vertical" >
+        <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/bjmgf_sdk_dock_pay_center_title_LayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#1bb0f8" >
+
+        <RelativeLayout
+            android:id="@+id/bjmgf_sdk_dock_pay_center_closeLlId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/bjmgf_sdk_closeAboutBtnId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bjmgf_sdk_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bjmgf_sdk_messageTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="管理员主页"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addstudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ff0000"
+        android:text="增加学生" />
+
+    <Button
+          android:textColor="#ffffff"
+        android:id="@+id/serchstudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ff0000ee"
+        android:text="查找学生" />
+
+    <Button
+        android:textColor="#ffffff"
+        android:id="@+id/addteacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ff0000ee"
+        android:text="增加老师" />
+
+    <Button
+        android:id="@+id/serchteacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ff0000ee"
+        android:textColor="#ffffff"
+        android:text="查找老师 " />
+
+    <Button
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:background="#ff0000ee"
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出" />
+
+</LinearLayout>

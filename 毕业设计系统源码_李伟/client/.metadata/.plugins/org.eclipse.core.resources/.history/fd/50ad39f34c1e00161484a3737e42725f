@@ -1,0 +1,31 @@
+package com.liwei.activity;
+
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class AdministratorLoginActivity  extends Activity{
+	private Button login;
+	private EditText username;
+	private EditText password;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.administrator_login);
+		MyApplation.setActivity(this);
+		initView();
+	}
+	public void  initView(){
+		login=(Button) findViewById(R.id.confremButton);
+		username=(EditText) findViewById(R.id.firstEditText);
+		password=(EditText) findViewById(R.id.secondEditText);
+		
+	}
+
+}

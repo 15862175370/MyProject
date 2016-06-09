@@ -1,0 +1,46 @@
+package com.liwei.activity;
+
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+import com.liwei.utils.ToastUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class AdministratorLoginActivity  extends Activity{
+	private Button login;
+	private EditText username;
+	private EditText password;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.administrator_login);
+		MyApplation.setActivity(this);
+		initView();
+	}
+	public void  initView(){
+		login=(Button) findViewById(R.id.confremButton);
+		username=(EditText) findViewById(R.id.firstEditText);
+		password=(EditText) findViewById(R.id.secondEditText);
+		login.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(username.getText().toString().equals("")||password.getText().toString().equals("")){
+					ToastUtils.getToast(AdministratorLoginActivity.this, "用户名或密码不能为空");
+				}else{
+					
+				}
+				
+			}
+		});
+		
+	}
+
+}

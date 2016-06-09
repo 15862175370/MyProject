@@ -1,0 +1,41 @@
+package com.liwei.activity;
+
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class EditTeacherActivity  extends Activity {
+	private EditText tno;
+	private EditText tname;
+	private EditText tsex;
+	private EditText tage;
+	private EditText prof;
+	private EditText phone;
+	private EditText dept;
+	private Button change;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+	      setContentView(R.layout.edit_teacher);
+	}
+	public void initView(){
+		tno=(EditText) findViewById(R.id.myteacher_tno);
+		tname=(EditText) findViewById(R.id.myteacher_tname);
+		tsex=(EditText) findViewById(R.id.myteacher_sex);
+		tage=(EditText) findViewById(R.id.myteacher_age);
+		prof=(EditText) findViewById(R.id.teacher_prof);
+		phone=(EditText) findViewById(R.id.myteacher_phone);
+		dept=(EditText) findViewById(R.id.myteacher_dept);
+		user=(EditText) findViewById(R.id.myteacher_user);
+		pass=(EditText) findViewById(R.id.myteacher_pass);
+		add=(Button) findViewById(R.id.myteacher_add);
+		
+	}
+
+}

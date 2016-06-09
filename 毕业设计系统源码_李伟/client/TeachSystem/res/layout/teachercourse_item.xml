@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <LinearLayout 
+     android:id="@+id/cno_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/cno_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程编号"/>
+        <TextView
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/my_cno_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+            />
+     
+    </LinearLayout>
+      
+    
+     <LinearLayout 
+     android:id="@+id/cname_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+    
+        >
+        <TextView 
+         android:id="@+id/cname_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程名称"/>
+        <TextView 
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/my_cname_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+   
+            />
+     
+    </LinearLayout>
+      
+
+      <LinearLayout 
+     android:id="@+id/ctime_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+    
+        >
+        <TextView 
+         android:id="@+id/ctime_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程时间"/>
+        <TextView 
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/my_ctime_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+       
+            />
+     
+    </LinearLayout>
+      
+      
+       <LinearLayout 
+     android:id="@+id/cadress_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+      
+        >
+        <TextView 
+         android:id="@+id/cadress_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程地点"/>
+        <TextView
+              android:layout_marginLeft="10dp"  
+            android:id="@+id/my_cadress_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+      
+            />
+     
+    </LinearLayout>
+      
+        <LinearLayout 
+     android:id="@+id/content_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+        <TextView 
+         android:id="@+id/content_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程内容"/>
+        <TextView 
+              android:layout_marginLeft="10dp" 
+            android:id="@+id/my_content_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+       
+            />
+     
+    </LinearLayout>
+      
+         <LinearLayout 
+     android:id="@+id/teacher_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+     
+        >
+     
+    </LinearLayout>
+      
+    <LinearLayout 
+           android:layout_height="wrap_content" 
+             android:layout_width="match_parent" 
+             android:layout_marginTop="30dp"
+             android:orientation="horizontal"
+            >
+           
+            
+            <Button 
+                 android:layout_marginLeft="5dp"
+                 android:layout_marginRight="5dp"
+                 android:layout_weight="1" 
+             android:id="@+id/proposition"  
+             android:layout_height="40dp" 
+               android:layout_width="0dp" 
+               android:background="#1bb0f8"
+               android:textSize="20dp"
+               android:text="命题"
+                />
+             <Button 
+                   android:layout_marginRight="5dp"
+              android:layout_weight="1"
+             android:id="@+id/attendance"  
+             android:layout_height="40dp" 
+               android:layout_width="0dp" 
+               android:background="#1bb0f8"
+               android:textSize="20dp"
+               android:text="考勤"
+                />
+             <Button 
+                   android:layout_marginRight="5dp"
+              android:layout_weight="1"
+             android:id="@+id/attenda"  
+             android:layout_height="40dp" 
+               android:layout_width="0dp" 
+               android:background="#1bb0f8"
+               android:textSize="20dp"
+               android:text="清除签到"
+                />
+        </LinearLayout>
+
+</LinearLayout>

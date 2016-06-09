@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    android:orientation="vertical" >
+     <LinearLayout 
+     android:id="@+id/sno_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/sno_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="学号"/>
+        <TextView
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/sno_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+          android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+    
+       <LinearLayout 
+     android:id="@+id/sname_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/sname_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="姓名"/>
+        <TextView
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/sname_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+          android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+    
+       
+       
+       <LinearLayout 
+     android:id="@+id/cname_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/cname_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="课程"/>
+        <TextView
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/cname_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+          android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+       
+       
+        <LinearLayout 
+     android:id="@+id/score_linearlayout"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView 
+         android:id="@+id/score_textview" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="成绩"/>
+        <TextView
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/score_tv" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+          android:textSize="20dp" 
+          android:background="@drawable/biankuang" 
+            />
+     
+    </LinearLayout>
+       
+
+</LinearLayout>

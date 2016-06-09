@@ -1,0 +1,6 @@
+package com.liwei.utils;
+
+public class UrlUtils {
+	public static String url="http://222.187.162.172:8080/TeachSystem"; 
+
+}

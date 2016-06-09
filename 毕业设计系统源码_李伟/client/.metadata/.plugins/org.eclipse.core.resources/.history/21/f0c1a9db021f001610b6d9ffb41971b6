@@ -1,0 +1,60 @@
+package com.liwei.activity;
+
+import com.liwei.model.bean.MyTeacher;
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class EditTeacherActivity  extends Activity {
+	private MyTeacher myTeacher;
+	private EditText tno;
+	private EditText tname;
+	private EditText tsex;
+	private EditText tage;
+	private EditText prof;
+	private EditText phone;
+	private EditText dept;
+	private Button change;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+	      setContentView(R.layout.edit_teacher);
+	      initView();
+	}
+	public void initView(){
+		tno=(EditText) findViewById(R.id.myteacher_tno);
+		tname=(EditText) findViewById(R.id.myteacher_tname);
+		tsex=(EditText) findViewById(R.id.myteacher_sex);
+		tage=(EditText) findViewById(R.id.myteacher_age);
+		prof=(EditText) findViewById(R.id.teacher_prof);
+		phone=(EditText) findViewById(R.id.myteacher_phone);
+		dept=(EditText) findViewById(R.id.myteacher_dept);
+		change=(Button) findViewById(R.id.myteacher_add);
+		myTeacher=(MyTeacher) getIntent().getSerializableExtra("myteacher");
+		tno.setText(String.valueOf(myTeacher.getTno()));
+		tname.setText(myTeacher.getTname());
+		tsex.setText(myTeacher.getTsex());
+		tage.setText(String.valueOf(myTeacher.getTage()));
+		prof.setText(myTeacher.getProf());
+		phone.setText(myTeacher.getPhone());
+		dept.setText(myTeacher.getDname());
+		change.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				
+			}
+		});
+		
+	}
+
+}

@@ -1,0 +1,79 @@
+package com.liwei.activity;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
+import com.liwei.adapter.MyTeacherAdapter;
+import com.liwei.application.MyApplation;
+import com.liwei.model.bean.MyTeacher;
+import com.liwei.teachsystem.R;
+import com.liwei.utils.UrlUtils;
+
+public class MyTeacherActivity extends Activity {
+	private String sno;
+	private ListView lv;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.myteacher);
+		MyApplation.setActivity(this);
+		sno=getIntent().getStringExtra("sno");
+		lv=(ListView) findViewById(R.id.myteacher);
+		ImageView close=(ImageView)findViewById(R.id.bjmgf_sdk_closeAboutBtnId);
+		/**
+		 * 返回按钮
+		 */
+		close.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			finish();
+				
+			}
+		});
+		HttpUtils utils=new HttpUtils();
+		RequestParams params=new RequestParams();
+		params.addBodyParameter("sno",sno);
+		utils.send(HttpMethod.POST,UrlUtils.url+"/GetMyTeacherServlet", params, new RequestCallBack<String>() {
+
+			@Override
+			public void onFailure(HttpException arg0, String arg1) {
+				Toast.makeText(MyTeacherActivity.this, "失败", Toast.LENGTH_LONG).show();
+				
+			}
+
+			@Override
+			public void onSuccess(ResponseInfo<String> responseInfo) {
+				Toast.makeText(MyTeacherActivity.this, "成功", Toast.LENGTH_LONG).show();
+				String list=responseInfo.result;
+				Gson gson=new Gson();
+				Type classOfT=new TypeToken<List<MyTeacher>>(){}.getType();
+				List<MyTeacher> list1=gson.fromJson(list, classOfT);
+				MyTeacherAdapter adapter=new MyTeacherAdapter(MyTeacherActivity.this, list1, sno);
+				lv.setAdapter(adapter);
+				adapter.notifyDataSetChanged();
+				
+			}
+		});
+	}
+
+}

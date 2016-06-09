@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/bjmgf_sdk_dock_pay_center_title_LayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#1bb0f8" >
+
+        <RelativeLayout
+            android:id="@+id/bjmgf_sdk_dock_pay_center_closeLlId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp" >
+
+          
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bjmgf_sdk_messageTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/bjmgf_sdk_dock_pay_center_title_LayoutId"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/xzit"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/studentlogin"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学生登录" />
+        </LinearLayout>
+
+        <LinearLayout
+             android:gravity="center"
+            android:id="@+id/teacherlogin"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教师登录" />
+        </LinearLayout>
+ <LinearLayout
+             android:gravity="center"
+            android:id="@+id/administration"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="管理员登录" />
+        </LinearLayout>
+        <LinearLayout
+             android:gravity="center"
+            android:id="@+id/baishitong"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/soso" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="百事通" />
+        </LinearLayout>
+    </LinearLayout>
+
+   <LinearLayout
+ android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView 
+            android:layout_centerInParent="true"
+          android:layout_width="wrap_content"  
+           android:layout_height="wrap_content" 
+            android:src="@drawable/teachnews"
+            />
+        </RelativeLayout>
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+         android:textSize="20dp"
+         android:text="教学通知"  
+           />
+    </LinearLayout>
+    <ListView
+        android:layout_marginTop="5dp" 
+        android:background="#ffffff"
+        android:id="@+id/lv"
+       android:layout_width="match_parent" 
+       android:layout_height="match_parent"/>
+</LinearLayout>

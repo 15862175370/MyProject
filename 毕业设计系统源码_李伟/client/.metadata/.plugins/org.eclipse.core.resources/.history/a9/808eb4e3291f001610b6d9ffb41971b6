@@ -1,0 +1,33 @@
+package com.liwei.activity;
+
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+public class SearchStudentActivity extends Activity{
+	private ListView lv=null;
+	private EditText et=null;
+	private ImageView search=null;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.searchstudent);
+		MyApplation.setActivity(this);
+		initView();
+	}
+	public void initView(){
+	lv=(ListView) findViewById(R.id.searchstudent);
+	et=(EditText) findViewById(R.id.mystudent_searchView);
+	search=(ImageView) findViewById(R.id.iv);
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.liwei.activity;
+
+import com.liwei.teachsystem.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class AddStudent  extends Activity{
+	private EditText sno;
+	private EditText sname;
+	private EditText sage;
+	private EditText phone;
+	private EditText dno;
+	private EditText user;
+	private EditText pass;
+	private Button add;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.addstudent);
+		
+		
+	}
+	public void initView(){
+		sno=(EditText) findViewById(R.id.mystudent_sno);
+		sname=(EditText) findViewById(R.id.mystudent_sname);
+		sage=(EditText) findViewById(R.id.mystudent_age);
+		phone=(EditText) findViewById(R.id.mystudent_phone);
+		dno=(EditText) findViewById(R.id.mystudent_dno);
+		user=(EditText) findViewById(R.id.mystudent_user);
+		pass=(EditText) findViewById(R.id.mystudent_pass);
+		add=(Button) findViewById(R.id.mystudent_add);
+	}
+
+}

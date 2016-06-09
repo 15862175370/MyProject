@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<LinearLayout 
+     android:id="@+id/cno"   
+      android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+       
+        <EditText
+            android:hint="请输入要查找的教工号"
+            android:layout_marginLeft="10dp" 
+            android:id="@+id/myteacher_searchView" 
+         android:layout_width="220dp"
+         android:layout_height="40dp" 
+          android:textSize="20dp" 
+         android:background="@drawable/biankuang" 
+            />
+    <ImageView 
+        android:layout_marginLeft="10dp"
+     android:layout_height="40dp"  
+     android:layout_width="40dp" 
+     android:src="@drawable/soso"
+        />
+    </LinearLayout>
+  <ListView 
+   android:id="@+id/mycourse"
+   android:layout_height="match_parent"
+   android:layout_width="match_parent" />
+
+</LinearLayout>

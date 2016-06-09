@@ -1,0 +1,100 @@
+package com.liwei.activity;
+
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
+import com.liwei.teachsystem.R;
+import com.liwei.utils.UrlUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class TeacherLoginActivity extends Activity {
+	public Button loginButton;
+	public String islogin;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.teacherlogin);
+		 initView();
+		
+	}
+	public void  initView(){
+		ImageView close=(ImageView)findViewById(R.id.bjmgf_sdk_closeAboutBtnId);
+		final EditText usernameEdit=(EditText)findViewById(R.id.firstEditText);
+		final EditText password=(EditText)findViewById(R.id.secondEditText);
+		 loginButton=(Button)findViewById(R.id.confremButton);
+		// islogin=loginButton.getText().toString();
+		/**
+		 * 返回按钮
+		 */
+		close.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			TeacherLoginActivity.this.finish();
+				
+			}
+		});
+		
+		loginButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(loginButton.getText().toString().equals("登录")){
+					
+					if(!usernameEdit.getText().toString().equals("")&&!password.getText().toString().equals("")){
+						HttpUtils utils=new HttpUtils();
+						RequestParams params=new RequestParams();
+						params.addBodyParameter("username",usernameEdit.getText().toString());
+						params.addBodyParameter("password", password.getText().toString());
+						utils.send(HttpMethod.POST, UrlUtils.url+"/CheckAccount", params, new RequestCallBack<String>() {
+
+							@Override
+							public void onFailure(HttpException arg0,
+									String arg1) {
+								Toast.makeText(TeacherLoginActivity.this, "请求网络数据失败", Toast.LENGTH_LONG).show();
+								
+							}
+
+							@Override
+							public void onSuccess(ResponseInfo<String> responseInfo) {
+								String flag=responseInfo.result;
+								if(flag.equals("true")){
+									
+								}else{
+									Toast.makeText(TeacherLoginActivity.this, "登录失败", Toast.LENGTH_LONG).show();
+								}
+								
+							}
+						});
+						loginButton.setText("取消");
+					}else{
+						Toast.makeText(TeacherLoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_LONG).show();
+				
+					}
+				}else if(loginButton.getText().toString().equals("取消")){
+					loginButton.setText("登录");
+					usernameEdit.setText("");
+					password.setText("");
+					
+				}
+				
+			}
+		});
+		
+		
+	}
+
+}

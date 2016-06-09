@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"   
+       android:layout_width="match_parent" 
+       
+        >
+        <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+  
+        <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/bjmgf_sdk_dock_pay_center_title_LayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#1bb0f8" >
+
+         <RelativeLayout
+            android:id="@+id/bjmgf_sdk_dock_pay_center_closeLlId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/bjmgf_sdk_closeAboutBtnId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bjmgf_sdk_back" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/bjmgf_sdk_messageTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="自测题"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+      
+
+    <LinearLayout 
+      android:layout_height="wrap_content"  
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+     android:id="@+id/question1"   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.下列是四大文明古国之一的是？"
+        
+        />
+      <RadioGroup   
+        android:id="@+id/radiogroup1"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="vertical"  
+        android:layout_x="3px"  
+    >   
+      <RadioButton   
+            android:id="@+id/radiobutton1"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="中国"  
+        />   
+           <RadioButton   
+            android:id="@+id/radiobutton2"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="俄罗斯"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton3"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="朝鲜"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton4"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="韩国"  
+        />   
+
+     </RadioGroup> 
+        </LinearLayout>
+        
+      <LinearLayout 
+      android:layout_height="wrap_content"  
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+     android:id="@+id/question2"   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.具有东方之珠的城市是？"
+        
+        />
+      <RadioGroup   
+        android:id="@+id/radiogroup2"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="vertical"  
+        android:layout_x="3px"  
+    >   
+      <RadioButton   
+            android:id="@+id/radiobutton5"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="苏州"  
+        />   
+           <RadioButton   
+            android:id="@+id/radiobutton6"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="杭州"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton7"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="上海"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton8"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="北京"  
+        />   
+
+     </RadioGroup> 
+        </LinearLayout>
+    
+      
+        <LinearLayout 
+      android:layout_height="wrap_content"  
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+     android:id="@+id/question3"   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.中国改革开放是哪一年"
+        
+        />
+      <RadioGroup   
+        android:id="@+id/radiogroup3"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="vertical"  
+        android:layout_x="3px"  
+    >   
+      <RadioButton   
+            android:id="@+id/radiobutton9"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="1978"  
+        />   
+           <RadioButton   
+            android:id="@+id/radiobutton10"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="1979"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton11"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="1980"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton12"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="1981"  
+        />   
+
+     </RadioGroup> 
+        </LinearLayout>
+        
+        
+        
+        <LinearLayout 
+      android:layout_height="wrap_content"  
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+     android:id="@+id/question4"   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.左手欢迎的编程语言是什么"
+        
+        />
+      <RadioGroup   
+        android:id="@+id/radiogroup4"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="vertical"  
+        android:layout_x="3px"  
+    >   
+      <RadioButton   
+            android:id="@+id/radiobutton13"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="C"  
+        />   
+           <RadioButton   
+            android:id="@+id/radiobutton14"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="C#"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton15"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="C++"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton16"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="JAVA"  
+        />   
+
+     </RadioGroup> 
+        </LinearLayout>
+      
+
+          
+        <LinearLayout 
+      android:layout_height="wrap_content"  
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+     android:id="@+id/question5"   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.下列哪项是android的四大组件是什么?"
+        
+        />
+      <RadioGroup   
+        android:id="@+id/radiogroup5"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="vertical"  
+        android:layout_x="3px"  
+    >   
+      <RadioButton   
+            android:id="@+id/radiobutton17"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="推送"  
+        />   
+           <RadioButton   
+            android:id="@+id/radiobutton18"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="线性布局"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton19"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="广播"  
+        />   
+        <RadioButton   
+            android:id="@+id/radiobutton20"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="通知"  
+        />   
+
+     </RadioGroup> 
+        </LinearLayout>
+      
+</LinearLayout>
+</ScrollView>

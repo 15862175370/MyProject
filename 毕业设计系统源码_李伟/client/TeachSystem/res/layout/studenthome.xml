@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:background="@drawable/bg_login"
+    android:orientation="vertical" >
+ <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/bjmgf_sdk_dock_pay_center_title_LayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#1bb0f8" >
+
+        <RelativeLayout
+            android:id="@+id/bjmgf_sdk_dock_pay_center_closeLlId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/bjmgf_sdk_closeAboutBtnId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bjmgf_sdk_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bjmgf_sdk_messageTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="学生主页"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+  <LinearLayout
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            
+            android:id="@+id/selftest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/send" />
+
+            <TextView
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:text="自我检测" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chooseCourse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                 android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/student" />
+
+            <TextView
+                 android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选课" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seecourse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                 android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/rili" />
+
+            <TextView
+                 android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看课程" />
+           
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+
+    
+    <LinearLayout
+        android:id="@+id/g"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            
+            android:id="@+id/my_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/message" />
+
+            <TextView
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:text="查看成绩" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chooseCourse1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                 android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/student" />
+
+            <TextView
+                 android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="问题反馈" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myteacher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                 android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sign"/>
+
+            <TextView
+                 android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的老师" />
+           
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    
+      
+    <LinearLayout
+        android:id="@+id/gggg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            
+            android:id="@+id/calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/message" />
+
+            <TextView
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:text="日历" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/advise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.liwei.model.bean.CircleImageView
+                 android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/student" />
+
+            <TextView
+                 android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                 android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习建议" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+        
+    </LinearLayout>
+  
+  
+</LinearLayout>

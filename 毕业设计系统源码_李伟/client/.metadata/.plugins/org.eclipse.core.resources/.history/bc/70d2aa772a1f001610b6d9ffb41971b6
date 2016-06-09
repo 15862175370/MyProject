@@ -1,0 +1,71 @@
+package com.liwei.activity;
+
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
+import com.liwei.application.MyApplation;
+import com.liwei.teachsystem.R;
+import com.liwei.utils.ToastUtils;
+import com.liwei.utils.UrlUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+public class SearchStudentActivity extends Activity{
+	private ListView lv=null;
+	private EditText et=null;
+	private ImageView search=null;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.searchstudent);
+		MyApplation.setActivity(this);
+		initView();
+	}
+	public void initView(){
+	lv=(ListView) findViewById(R.id.searchstudent);
+	et=(EditText) findViewById(R.id.mystudent_searchView);
+	search=(ImageView) findViewById(R.id.iv);
+	search.setOnClickListener( new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			if(et.getText().toString().equals("")){
+				ToastUtils.getToast(SearchStudentActivity.this, "请输入要查找的内容");
+			}else{
+				HttpUtils utils=new HttpUtils();
+				RequestParams params=new RequestParams();
+				params.addBodyParameter("sno",et.getText().toString());
+				utils.send(HttpMethod.POST, UrlUtils.url+"",params, new RequestCallBack<String>() {
+
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						ToastUtils.getToast(SearchStudentActivity.this, "请求网络数据失败");
+						
+					}
+
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						
+						
+					}
+				});
+			}
+			
+		}
+	});
+		
+	}
+
+}
