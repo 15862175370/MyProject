@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/barbershop_scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    
+  <ScrollView 
+       android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+<RelativeLayout   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+  <!--   <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/left" />
+ -->
+  <!--   <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:text="发型师排行榜"
+        android:textSize="20dp" /> -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/icon" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:src="@drawable/nullstar2x" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:text="根据最近一个月的数据统计，整理出本城内最受欢迎的理发师Top8" />
+
+    <com.atgem.ailisidemo.AllListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2" >
+       
+    </com.atgem.ailisidemo.AllListView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listView1"
+        android:layout_marginTop="34dp"
+        android:text="赞 2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/star" />
+     <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginTop="10dp"
+        android:text="评论" />
+
+   <com.atgem.ailisidemo.AllListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        android:layout_below="@+id/text"
+        android:layout_marginTop="14dp" >
+    </com.atgem.ailisidemo.AllListView>
+    </RelativeLayout>
+    </ScrollView>
+    
+       <!--  <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView4"
+            android:layout_below="@id/listView2"
+            android:layout_toLeftOf="@+id/button3"
+            android:background="@drawable/my_shape"
+            android:ems="10"
+            android:hint="添加一句评论" >
+
+        <requestFocus /> -->
+         <LinearLayout
+          android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/backgroundedit"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+        
+         
+
+        <EditText
+            android:id="@+id/et_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="5"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:hint="添加评论..."
+            android:singleLine="true" >
+
+          
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_send"
+            android:text="发送" />
+    </LinearLayout>
+    
+
+  <!--   <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentRight="true"
+        android:text="发送" /> -->
+   
+</RelativeLayout>
+

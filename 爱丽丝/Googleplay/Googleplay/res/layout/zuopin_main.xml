@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zqq="http://schemas.android.com/apk/res/com.gem.projectandroid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!--
+    <com.gem.projectandroid.view.SettingIteamView
+        android:id="@+id/attentionfans"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        zqq:text="我的米粉" />
+    -->
+
+  
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/ly_attentoinfans"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#f64e4d">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape" >
+
+    <TextView
+        android:id="@+id/tv_attention"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+      
+    
+        android:gravity="center"
+        android:text="作品集"
+        android:textColor="#f00"
+        android:textSize="15dp"
+      />
+
+        <TextView
+       
+            android:id="@+id/tv_fans"
+             android:textColor="#f00"
+             android:gravity="center"
+          
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_attention"
+            android:layout_alignBottom="@+id/tv_attention"
+            android:layout_toRightOf="@+id/tv_attention"
+             android:textSize="15dp"
+            android:text="个人秀" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+      <android.support.v4.view.ViewPager
+        android:id="@+id/vp_attentoinfanspager"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ly_attentoinfans" />
+    
+
+</RelativeLayout>

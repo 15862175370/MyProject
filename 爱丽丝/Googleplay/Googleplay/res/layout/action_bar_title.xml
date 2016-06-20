@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="wrap_content"  
+    android:background="#f64e4d">  
+      
+    <ImageButton 
+        android:id="@+id/image_btn"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:background="@drawable/back"  
+        android:layout_marginLeft="12dp"  
+        android:gravity="center"  
+       
+        android:layout_gravity="left|center"  
+        />  
+      
+    <TextView   
+        android:id="@+id/title"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:text="门店"  
+        android:gravity="center"  
+        
+        android:layout_gravity="center"  
+        android:textSize="20sp"  
+        android:textColor="#ffffff"
+        />
+
+    <TextView
+        android:id="@+id/tv_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right|center"
+        android:textColor="@color/wheat"
+        android:visibility="invisible"
+        android:text="发布" />
+      
+</FrameLayout>

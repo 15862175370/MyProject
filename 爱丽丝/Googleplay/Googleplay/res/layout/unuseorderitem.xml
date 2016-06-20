@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.loopj.android.image.SmartImageView 
+        android:id="@+id/iv_storeimage"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        android:src="@drawable/barberstorephoto" />
+
+    <TextView
+        android:id="@+id/tv_storename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_storeimage"
+        android:text="1987发型工作室" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_textprice"
+        android:layout_alignBottom="@+id/tv_textprice"
+        android:layout_toRightOf="@+id/tv_textprice"
+        android:text="345"
+        android:textColor="@color/histroycolor" />
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_textquantity"
+        android:layout_alignBottom="@+id/tv_textquantity"
+        android:layout_toRightOf="@+id/tv_textquantity"
+        android:text="1"
+        android:textColor="@color/histroycolor" />
+
+    <TextView
+        android:id="@+id/tv_buytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_textprice"
+       
+        android:text="2015-10-17  14:28"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/histroycolor" />
+
+    <TextView
+        android:id="@+id/tv_textprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_alignLeft="@+id/tv_storename"
+        android:text="总价：￥"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/histroycolor" />
+
+    <TextView
+        android:id="@+id/tv_textquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_price"
+        android:layout_alignBottom="@+id/tv_price"
+        android:layout_alignRight="@+id/tv_use"
+        android:layout_marginRight="30dp"
+        android:text="数量："
+        android:textColor="@color/histroycolor" />
+
+    <TextView
+        android:id="@+id/tv_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_buytime"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/shap_usetv"
+        android:text="使用"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

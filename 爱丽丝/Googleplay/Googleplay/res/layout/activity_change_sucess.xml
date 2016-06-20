@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.atgem.googleplay.ChangeSucess" >
+
+    <ImageView
+        android:id="@+id/changesuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/changesuccess" />
+
+    <TextView
+        android:id="@+id/tv_backhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/changesuccess"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/shape_changesuccess"
+        android:text="返回首页"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_reutrnset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_backhome"
+        android:layout_alignBottom="@+id/tv_backhome"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="39dp"
+        android:background="@drawable/shape_changesuccess"
+        android:text="返回设置"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

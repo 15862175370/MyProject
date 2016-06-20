@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="300dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/aliwx_head_default" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_head"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="21dp"
+                android:layout_toRightOf="@+id/iv_head"
+                android:textColor="@color/wheat"
+                android:textSize="20dp"
+                android:text="昵称" />
+        </RelativeLayout>
+        
+
+        <TextView 
+            android:layout_marginTop="50dp"
+            style="@style/MenuTabText"
+            android:background="#33aa9900"
+            android:drawableLeft="@drawable/tab_news"
+            android:text="我的消息"/>
+      
+        <TextView 
+            android:id="@+id/selfpost"
+            style="@style/MenuTabText"
+            android:drawableLeft="@drawable/tab_ties"
+            android:text="发帖"/>
+        <TextView 
+            android:id="@+id/selfInfo"
+            style="@style/MenuTabText"
+            android:drawableLeft="@drawable/tab_pics"
+            android:text="个人中心"/>
+        <TextView 
+            android:id="@+id/mycollect"
+            style="@style/MenuTabText"
+            android:drawableLeft="@drawable/tab_ugc"
+            android:text="我的收藏"/>
+       
+    </LinearLayout>
+
+
+</ScrollView>

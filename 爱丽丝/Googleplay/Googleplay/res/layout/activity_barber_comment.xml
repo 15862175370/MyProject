@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+  <ScrollView
+        android:id="@+id/sv_bm" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+         >
+
+        <LinearLayout
+            android:id="@+id/ly_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" >
+
+                <com.atgem.googleplay.RoundedCornerImageView
+                    android:id="@+id/iv_bphotp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/barber2" />
+
+                <TextView
+                    android:id="@+id/tv_bpos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/iv_bphotp"
+                    android:layout_marginRight="21dp"
+                    android:text="职位"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_bname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_bphotp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_bphotp"
+                    android:text="昵称"
+                    android:textColor="#EE7621" />
+
+                <ImageView
+                    android:id="@+id/iv_zuopin"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_alignLeft="@+id/tv_bname"
+                    android:layout_below="@+id/tv_bname"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/image1" />
+
+                <TextView
+                    android:id="@+id/tv_bstore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/iv_zuopin"
+                    android:layout_below="@+id/iv_zuopin"
+                    android:layout_marginTop="15dp"
+                    android:text="所属店名"
+                    android:textColor="@color/gray"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_bpos"
+                    android:layout_alignTop="@+id/tv_bstore"
+                    android:text="time"
+                    android:textColor="@color/gray"
+                    android:textSize="11dp" />
+            </RelativeLayout>
+
+            <bean.AllList
+            
+                android:id="@+id/lv_pinglun"
+                android:layout_width="match_parent"
+                android:layout_height="218dp"
+                android:layout_marginTop="10dp" >
+            </bean.AllList>
+        </LinearLayout>
+   </ScrollView>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/backgroundedit"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="5"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:hint="添加评论..."
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_send"
+            android:text="发送" />
+    </LinearLayout>
+
+</LinearLayout>
+ 

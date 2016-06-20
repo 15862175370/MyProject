@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/barbershop_scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/store" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="10dp"
+            android:text="员工 ：16人" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/greylocation" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imageView3"
+            android:text="吴中区仁爱路文心广场" />
+
+        <ImageView
+            android:id="@+id/iv_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/iv_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_star1"
+            android:layout_toRightOf="@+id/iv_star1"
+            android:src="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/iv_star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_star1"
+            android:layout_toRightOf="@+id/iv_star2"
+            android:src="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/iv_star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_star1"
+            android:layout_toRightOf="@+id/iv_star3"
+            android:src="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_star4"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/iv_star4"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="58位顾客评价" />
+
+        <TextView
+            android:id="@+id/tv_barber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_star1"
+            android:layout_below="@+id/iv_star1"
+            android:layout_marginTop="10dp"
+            android:text="发型师" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_barber"
+            android:layout_alignBottom="@+id/tv_barber"
+            android:layout_toRightOf="@+id/iv_star3"
+            android:text="选择发型师预约"
+            android:textColor="@color/grey"
+            android:textSize="12dp" />
+
+        <View
+            android:id="@+id/iv_big_partition"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_barber"
+            android:background="#a3a3a3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            
+           />
+
+        <com.atgem.ailisidemo.AllListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_big_partition"
+            android:layout_alignRight="@+id/iv_big_partition"
+            android:layout_below="@+id/iv_big_partition" >
+        </com.atgem.ailisidemo.AllListView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_textintroduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listView1"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_layout"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="门店介绍" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout_textintroduce"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_layout"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:text="创立于2005年，通过10年的不断发展，已成为焗油相当有影响力的品牌沙龙，公司本着专业的技术，优质的服务为每一位消费者提供全方位的形象设计服务。"
+                android:textColor="@color/histroycolor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

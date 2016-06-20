@@ -1,0 +1,113 @@
+
+<RelativeLayout 
+    
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".HomeActivity"
+    
+    >
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+   
+    >
+     
+   <!--  <LinearLayout
+        android:id="@+id/topbar"
+         android:layout_width="match_parent"
+        android:background="@drawable/top_bar_bg"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+        
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back"
+            android:background="@drawable/main_back"/>
+        
+        <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/top_bar_divider"/>
+        
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:layout_marginLeft="15dp"
+            android:text="黑马新闻"/>
+        
+    </LinearLayout>
+ -->
+ <RelativeLayout 
+     
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     
+     >
+     <!-- com.heima52.pullrefresh.view.HomeViewPager -->
+
+     <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+         android:layout_marginTop="-18dp"
+       
+        >
+     
+        
+
+    </android.support.v4.view.ViewPager>
+      <GridView
+         android:id="@+id/gv_kinds"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/main_viewpager"
+         android:layout_below="@id/main_viewpager"
+         android:layout_marginTop="-2dp"
+         android:numColumns="4" >
+     </GridView>
+     <View 
+         android:id="@+id/bg_back"
+          android:layout_width="match_parent"
+         android:layout_height="10dp"
+         android:layout_below="@id/gv_kinds"
+         android:background="#f1f0f6"
+         android:layout_marginTop="10dp"
+         
+         />
+        <TextView 
+                 android:id="@+id/tv_nowtime"            
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            
+            
+            />
+     <com.atgem.ailisidemo.AllListView
+         android:id="@+id/lv_activity"
+         android:layout_width="match_parent"
+         android:layout_height="420dp"
+         android:layout_below="@id/bg_back"
+         android:layout_alignLeft="@+id/main_viewpager"
+         android:layout_marginTop="7dp"
+         android:dividerHeight="10dp"
+         android:divider="#ffffff"
+         ></com.atgem.ailisidemo.AllListView>
+     
+     </RelativeLayout>
+</ScrollView>
+
+     <GridView
+         android:id="@+id/gv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+          
+         android:layout_alignParentBottom="true"
+         android:background="#ffffff"
+          android:gravity="center"
+         android:numColumns="4" >
+     </GridView>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#DDDDDD">
+
+   
+    
+    <com.loopj.android.image.SmartImageView 
+        android:id="@+id/image_shop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/sirendingzhi" />
+
+    <TextView
+        android:id="@+id/tv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/image_shop"
+        android:text="私人订制" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_shop"
+        android:layout_below="@+id/tv_shop"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp" 
+        android:text="总价 :￥ "/>
+    
+    
+    <TextView
+        android:id="@+id/tv_totalnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_total"
+        android:layout_toLeftOf="@+id/tv_number"
+        android:text="459"
+        android:textSize="10sp" />
+    
+    <TextView
+        android:id="@+id/tv_pinglun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_total"
+        android:layout_below="@+id/tv_total"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:text="待评价"/>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_total"
+        android:layout_marginLeft="45dp"
+        android:layout_toRightOf="@+id/tv_shop"
+        android:text="数量: 1"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/btn_pingjia"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignBaseline="@+id/tv_pinglun"
+        android:layout_alignBottom="@+id/tv_pinglun"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tv_number"
+        android:background="#ff0000"
+        android:text="评价"
+        android:textColor="#fffafa"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

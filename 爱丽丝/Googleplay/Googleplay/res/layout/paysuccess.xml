@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <LinearLayout
+        android:id="@+id/paysLinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_layout" >
+
+        <TextView
+            android:id="@+id/tv_commodityname"
+            android:layout_width="122dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="商品名称  " />
+
+        <TextView
+            android:id="@+id/tv_odername"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:text="1987美发工作室预约券" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paysLinearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paysLinearLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_layout" >
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="122dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="预约券 01" />
+
+        <TextView
+            android:id="@+id/yuyuema"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/TextView03"
+            android:layout_alignBottom="@+id/TextView03"
+            android:layout_toRightOf="@+id/TextView03"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="3002 4886 5336" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/paysuccess" />
+
+    <TextView
+        android:id="@+id/tv_returnhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/paysLinearLayout2"
+        android:layout_below="@+id/paysLinearLayout2"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/shape_paysuccess_returnhome"
+        android:textColor="@color/white"
+        android:text="返回首页" />
+
+    <TextView
+        android:id="@+id/tv_continuebuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_returnhome"
+        android:layout_alignBottom="@+id/tv_returnhome"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/tv_returnhome"
+        android:background="@drawable/shap_paysuccess_continuebuy"
+        android:text="继续购物"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.atgem.googleplay.ChangeUserInfo" >
+
+    <TextView
+        android:id="@+id/tv_txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:text="呢称" />
+
+    <EditText
+        android:id="@+id/et_u_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_txtname"
+        android:layout_alignBottom="@+id/tv_txtname"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/tv_txtname"
+        android:background="@drawable/bg_edittext"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv_txtsex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_txtname"
+        android:layout_below="@+id/tv_txtname"
+        android:layout_marginTop="22dp"
+        android:text="性别" />
+
+    <TextView
+        android:id="@+id/tv_txtcity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_txtsex"
+        android:layout_below="@+id/tv_txtsex"
+        android:layout_marginTop="22dp"
+        
+        android:text="所在地" />
+
+    <TextView
+        android:id="@+id/tv_txtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_txtcity"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/et_u_name"
+        android:text="邮箱" />
+
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_txtemail"
+        android:layout_alignBottom="@+id/tv_txtemail"
+        android:layout_alignLeft="@+id/et_city"
+        android:ems="10"
+        android:background="@drawable/bg_edittext"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tv_txtsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_txtemail"
+        android:layout_below="@+id/et_mail"
+        android:layout_marginTop="27dp"
+        android:text="个性签名" />
+
+    <EditText
+        android:id="@+id/et_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/tv_txtsign"
+        android:layout_alignRight="@+id/et_mail"
+        android:layout_below="@+id/tv_txtsign"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="top"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tv_updata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/shap_submitorder"
+        android:text="提交"
+        android:textColor="@color/white" />
+
+    <RadioGroup
+        android:id="@+id/edit_dsex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_txtcity"
+        android:layout_alignLeft="@+id/et_u_name"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/edit_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_daddress"
+            android:layout_toRightOf="@+id/textView4"
+            android:checked="true"
+            android:text="女" />
+
+        <RadioButton
+            android:id="@+id/edit_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_daddress"
+            android:layout_toRightOf="@+id/edit_women"
+            android:text="男" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_txtcity"
+        android:layout_alignBottom="@+id/tv_txtcity"
+        android:layout_alignLeft="@+id/edit_dsex"
+        android:background="@drawable/bg_edittext"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

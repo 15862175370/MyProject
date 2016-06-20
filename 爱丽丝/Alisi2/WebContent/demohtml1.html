@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5</title>
+
+<link rel="stylesheet" href="css/csshtml1.css"/>
+</head>
+
+<body>
+	<header></header>
+    <nav></nav>
+    <aside></aside>
+    <section>
+    	<a href="http://www.163.com">163</a>
+<!--表格案例：表格用于元素布局-->
+  <!--  <table width="400" border="1" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="5">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+  
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+   
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+   
+    <td colspan="5">&nbsp;</td>
+    </tr>
+</table>-->
+		<form action="http://www.baidu.com" method="get" id="myform">
+		<table width="500px" height="400px" border="1px" id="taba" >
+        	<caption style="font-size:30px;color:#F00">注册页面</caption>
+        	<tr>
+            	<td>NAME</td>
+                <td><input name="txtname" id="txtname" type="text" placeholder="input your name" required></td>
+            </tr>
+            <tr>
+            	<td>PASSWORD</td>
+                <td><input type="password" maxlength="6" id="txtpass" name="txtpass" pattern="[0-9]*" required/></td>
+            </tr>
+            <tr>
+            	<td>SEX</td>
+                <td>
+                	<input type="radio" name="sex" value="1" id="male">男
+                    <input type="radio" name="sex" value="0" id="female" checked>女
+                </td>
+            </tr>
+            <tr>
+            	<td>HOBBY</td>
+                <td>
+                <input type="checkbox" id="read" checked>READING
+                <input name="SPORT" type="checkbox" value="sport">SPORTINT
+                </td>
+            </tr>
+            <tr>
+            	<td>BIRTHDAY</td>
+                <td><input type="date" id="birth"></td>
+            </tr>
+            <tr>
+            	<td>EMAIL</td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+            	<td>PERSONNAL WEB</td>
+                <td>
+                	<input type="text" id="myweb" list="weblist">
+                    <datalist id="weblist">
+                    	<option value="www.163.com">网页</option>
+                        <option value="wwww.yahoo.com">雅虎</option>
+                        <option value="www.baidu.com">百度</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+            	<td>RANGE</td>
+                <td>
+           <!--     <input type="range" min="1" max="100" step="5" value="1" onChange="shownum.innerHTML=this.value">
+                <span id="shownum">1</span>-->
+                
+                 <input type="range" min="0" max="100" step="5" value="1" onChange="pro.value=this.value">
+                </td>
+            </tr>
+             <tr>
+            	<td>ADDRESS</td>
+                <td>
+                	<select>
+                    	<optgroup label="北南">
+                            <option value="shandong">山东</option>
+                            <option>江苏</option>
+                            <option>河北</option>
+                        </optgroup>
+                        <optgroup label="华南">
+                        <option>广西</option>
+                        <option>浙江</option>
+                        <option>广东</option>
+                        </optgroup>
+                    </select>省
+                </td>
+            </tr>
+            <tr>
+            	<td>PROGRESS</td>
+                <td>
+                	<progress max="100" value="0" id="pro"></progress>
+                </td>
+            </tr>
+            <tr>
+            	<td>BGCOLOR</td>
+                <td><input type="color" id="mycolor" onChange="taba.style.background-color=value"></td>
+            </tr>
+            <tr>
+            	<td><input type="button" value="begin"></td>
+                <td><input type="submit" class="btncss" value="注册" id="regist"><input type="reset" class="btncss" value="清空"></td>
+            </tr>
+           
+        </table>
+        </form>
+   	  <article></article>
+	</section>
+    <footer></footer>
+</body>
+</html>

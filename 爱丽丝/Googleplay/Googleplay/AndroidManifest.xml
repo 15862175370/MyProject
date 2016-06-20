@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atgem.googleplay"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+ <permission
+        android:name="com.atgem.googleplay.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+  <uses-permission android:name="com.atgem.googleplay.permission.JPUSH_MESSAGE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+      <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+          <uses-permission android:name="android.permission.VIBRATE" />
+            <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+     <!-- Optional for location -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    
+   
+   
+    <application
+
+        android:name="com.atgem.ailisidemo.activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Ks3XjTRt4A3oWtOEz3ZqMXC4" />
+
+        <activity
+            android:name="com.atgem.googleplay.MainActivity2"
+            android:label="@string/app_name" >
+        </activity>
+        
+          <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden" 
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.atgem.googleplay" />
+            </intent-filter>
+        </activity>
+        
+           <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    
+        
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                
+            </intent-filter>
+        </service>
+        
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service 
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.atgem.googleplay"/>
+            </intent-filter>
+        </service>
+        
+        
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+             <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.atgem.googleplay" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+             <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+        
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+        <!-- User defined.    用户自定义的广播接收器-->
+      <receiver
+            android:name="com.atgem.googleplay.MyReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> Required  用户注册SDK的intent
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />  
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> Required  用户接收SDK消息的intent
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> Required  用户接收SDK通知栏信息的intent
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> Required  用户打开自定义通知栏的intent
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> Optional 用户接受Rich Push Javascript 回调函数的intent
+                <action android:name="cn.jpush.android.intent.CONNECTION" />接收网络变化 连接/断开 since 1.6.3
+                <category android:name="com.atgem.googleplay" />
+            </intent-filter>
+        </receiver> 
+ 
+        
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="fae5679d31af1e74ae935f4d" /> <!--  </>值来自开发者平台取得的AppKey-->
+        
+        
+        <activity
+            android:name="com.atgem.googleplay.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.atgem.googleplay.MainActivity2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.atgem.googleplay.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.atgem.lunbodemo.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.atgem.ailisidemo.OrderActivity"
+            android:label="@string/title_activity_order" >
+        </activity>
+        <activity
+            android:name="com.atgem.ailisidemo.WorksActivity"
+            android:label="@string/title_activity_works" >
+        </activity>
+       <!--  <activity
+            android:name="com.atgem.ailisidemo.activity.Splash1Activity"
+            android:label="@string/title_activity_splash" >
+            
+        </activity> -->
+        <activity
+            android:name="com.atgem.ailisidemo.activity.LActivity"
+            android:label="@string/title_activity_l" >
+        </activity>
+        <!-- 以下是photo的 -->
+        <activity
+            android:name="com.king.photo.activity.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.king.photo.activity.TestPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.king.photo.activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.king.photo.activity.AlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ImageFile" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ShowAllPhoto" >
+        </activity>
+        <activity android:name="com.king.photo.activity.GalleryActivity" >
+        </activity>
+        <activity
+            android:name="com.king.photo.activity.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="com.atgem.ailisidemo.activity.ShopActivity" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.OrderMainActivity"
+            android:label="@string/title_activity_order_main" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.HistoryOrderActivity"
+            android:label="@string/title_activity_history_order" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.ShopInfoActivity"
+            android:label="@string/title_activity_shop_info" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.BarberActivity"
+            android:label="@string/title_activity_barber" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.BaiduMapActivity"
+            android:label="@string/title_activity_baidu_map" >
+        </activity>
+        <activity android:name="com.atgem.ailisidemo.activity.OrderMenu" />
+        <activity android:name="com.atgem.ailisidemo.activity.AfterTomorrowMenu" />
+        <activity android:name="com.atgem.ailisidemo.activity.TomorrowOrderMenu" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.atgem.googleplay.ConfirmOrderActivity"
+            android:label="@string/title_activity_confirm_order" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.PayActivity"
+            android:label="@string/title_activity_pay" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.PaySucessActivity"
+            android:label="@string/title_activity_pay_sucess" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.CollectActivity"
+            android:label="@string/title_activity_collect" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.UnuseOrderActivity"
+            android:label="@string/title_activity_unuse_order" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.SecondActivity"
+            android:label="@string/title_activity_second" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.AllInfoMessageActivity"
+            android:label="@string/title_activity_all_info_message" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.InfoMessageActivity"
+            android:label="@string/title_activity_info_message" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.VersionActivity"
+            android:label="@string/title_activity_version" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.SuggestActivity"
+            android:label="@string/title_activity_suggest" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.SuggestSuccessActivity"
+            android:label="@string/title_activity_suggest_success" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.ChangeSucess"
+            android:label="@string/title_activity_change_sucess" >
+        </activity>
+        <activity android:name="com.atgem.googleplay.ChangeUserInfo" />
+        <activity
+            android:name="com.atgem.googleplay.TopOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_top_order"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.SplashActivity"
+            android:label="@string/title_activity_splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.atgem.googleplay.GuideActivity"
+            android:label="@string/title_activity_guide" >
+        </activity>
+           <activity android:name="com.atgem.googleplay.MapOverThing"></activity>
+           <activity android:name="com.atgem.googleplay.SpaceImageDetailActivity"></activity>
+        <activity android:name="com.atgem.googleplay.BarPostItemComment"
+              android:windowSoftInputMode="adjustUnspecified|stateHidden" >></activity>
+        <activity
+            android:name=".UserShowActivity"
+            android:label="@string/title_activity_user_show" >
+        </activity>
+        
+    </application>
+
+</manifest>

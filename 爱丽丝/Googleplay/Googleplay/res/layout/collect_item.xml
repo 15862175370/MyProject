@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+
+    <com.atgem.googleplay.RoundedCornerImageView
+        android:id="@+id/image_barbericon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/barberheadicon" />
+
+  <!--   <TextView
+        android:id="@+id/tv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_below="@+id/tv_barbername"
+     android:layout_alignLeft="@+id/tv_barbername"
+     android:layout_marginTop="10dp"
+        android:text="店名:"
+        android:textSize="20dp" /> -->
+
+    <TextView
+        android:id="@+id/tv_shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_barbername"
+        android:layout_below="@+id/tv_barbername"
+        android:layout_marginTop="10dp"
+        android:text="亮仔国际"
+        android:textColor="@color/gray"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/tv_bpos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_barbername"
+        android:layout_alignBottom="@+id/tv_barbername"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/grey"
+        android:text="职位" />
+
+    <TextView
+        android:id="@+id/tv_barbername"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/image_barbericon"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/image_barbericon"
+        android:text="亮仔"
+        android:layout_marginTop="8dp"
+        android:textColor="#EE7621"
+        android:textSize="15dp" />
+
+</RelativeLayout>
